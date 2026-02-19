@@ -1,7 +1,7 @@
 
 clc;
 clear
-
+%  After connecting using Pageant (SSH key loaded)
 %% === Settings ===
 user   = '??????';  % Use your own username. If you don't have one, ask Michael to create it.
 server = 'orion.fnb.maschinenbau.tu-darmstadt.de';
@@ -33,4 +33,5 @@ else
     system(sprintf('pscp -batch %s%s@%s:"%s/*.csv" "%s"', agent,user,server,remoteRunDir,destLocal));
     system(sprintf('pscp -batch %s%s@%s:"%s/*.png" "%s"', agent,user,server,remoteRunDir,destLocal));
 end
+
 
